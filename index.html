@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>UnDice Game</title>
+   <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+   <div class="currency"><span> </span><span id="diceCoins">0</span></div>
+
+
+   <div class="container">
+     <h1>UnDice</h1>
+     <div class="dice-container">
+       <div class="dice" id="dice1">⚅</div>
+       <div class="dice" id="dice2">⚅</div>
+     </div>
+     <button id="rollDiceBtn">Roll Dice</button>
+     <p id="result">Roll the dice to start the game!</p>
+     <h2>Leaderboard</h2>
+     <p id="rollCount">Total Rolls: 0</p>
+     <button id="shopBtn">Shop</button>
+     <br>
+     <br>
+     <div id="leaderboard">
+     <h2>Top 100 Players</h2>
+     <ul id="leaderboardList"></ul>
+   </div>
+   </div>
+
+
+   <div id="shopModal" class="modal">
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <h2>Shop</h2>
+       <p id="liveRollCount">Current Rolls: 0</p>
+       <div class="upgrade">
+         <img src="2x-rolls.png" alt="2x Rolls Upgrade" />
+         <p>2x Rolls (Cost: <strong>1000 Rolls</strong>)</p>
+         <button id="buy2xBtn">Buy</button>
+         <br>
+         <br>
+         <p id="purchaseMessage" style="display: none"></p>
+       </div>
+       <div class="upgrade">
+         <img src="2x-luck.png" alt="2x Luck Upgrade" />
+         <p>2x Luck (Cost: <strong>3000 Rolls</strong>)</p>
+         <button id="buy2xLuckBtn">Buy</button>
+         <p id="luckPurchaseMessage" style="display: none"></p>
+       </div>
+     </div>
+   </div>
+
+
+   <script src="script.js"></script>
+ </body>
+</html>
