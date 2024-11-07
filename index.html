@@ -1,58 +1,157 @@
 <!doctype html>
 <html lang="en">
- <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>UnDice Game</title>
-   <link rel="stylesheet" href="style.css" />
- </head>
- <body>
-   <div class="currency"><span> </span><span id="diceCoins">0</span></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnDice Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="currency"><span> </span><span id="diceCoins">0</span></div>
 
+    <div class="container">
+      <h1>UnDice</h1>
+      <div class="dice-container">
+        <div class="dice" id="dice1">⚅</div>
+        <div class="dice" id="dice2">⚅</div>
+      </div>
+      <button id="rollDiceBtn">Roll Dice</button>
+      <p id="result">Roll the dice to start the game!</p>
+      <h2>Leaderboard</h2>
+      <p id="rollCount">Total Rolls: 0</p>
+      <button id="shopBtn">Upgrades</button>
+      <br />
+      <br />
+      <div id="leaderboard">
+        <h2>Top 10 Players</h2>
+        <ul id="leaderboardList">
+          <li>Player1: <strong>99999 Dice Coins</strong></li>
+          <li>Player2: <strong> 99992Dice Coins</strong></li>
+          <li>Player3: <strong>42392 Dice Coins</strong></li>
+          <li>Player4: <strong>29321 Dice Coins</strong></li>
+          <li>Player5: <strong>11111 Dice Coins</strong></li>
+          <li>Player6: <strong>10232 Dice Coins</strong></li>
+          <li>Player7: <strong>10000 Dice Coins</strong></li>
+          <li>Player8: <strong>9991 Dice Coins</strong></li>
+          <li>Player9: <strong>8123 Dice Coins</strong></li>
+          <li>Player10: <strong>5828 Dice Coins</strong></li>
 
-   <div class="container">
-     <h1>UnDice</h1>
-     <div class="dice-container">
-       <div class="dice" id="dice1">⚅</div>
-       <div class="dice" id="dice2">⚅</div>
-     </div>
-     <button id="rollDiceBtn">Roll Dice</button>
-     <p id="result">Roll the dice to start the game!</p>
-     <h2>Leaderboard</h2>
-     <p id="rollCount">Total Rolls: 0</p>
-     <button id="shopBtn">Shop</button>
-     <br>
-     <br>
-     <div id="leaderboard">
-     <h2>Top 100 Players</h2>
-     <ul id="leaderboardList"></ul>
-   </div>
-   </div>
+        </ul>
+      </div>
+    </div>
 
+    <div id="specialRollOverlay" class="overlay">
+      <div class="crystal-content">
+        <h1 id="cys1">Crystal Obtained: uLight</h1>
+        <p class="rarity"><strong>(1/75 chance)</strong></p>
+        <p class="description">Use this crystal in battle</p>
+        <p class="reward">+50 Dice Coins</p>
+        <img
+          src="ulight-crystal.png"
+          alt="uLight Crystal"
+          class="crystal-image"
+        />
+      </div>
+    </div>
 
-   <div id="shopModal" class="modal">
-     <div class="modal-content">
-       <span class="close">&times;</span>
-       <h2>Shop</h2>
-       <p id="liveRollCount">Current Rolls: 0</p>
-       <div class="upgrade">
-         <img src="2x-rolls.png" alt="2x Rolls Upgrade" />
-         <p>2x Rolls (Cost: <strong>1000 Rolls</strong>)</p>
-         <button id="buy2xBtn">Buy</button>
-         <br>
-         <br>
-         <p id="purchaseMessage" style="display: none"></p>
-       </div>
-       <div class="upgrade">
-         <img src="2x-luck.png" alt="2x Luck Upgrade" />
-         <p>2x Luck (Cost: <strong>3000 Rolls</strong>)</p>
-         <button id="buy2xLuckBtn">Buy</button>
-         <p id="luckPurchaseMessage" style="display: none"></p>
-       </div>
-     </div>
-   </div>
+    <div id="syrusOverlay" class="overlay">
+      <div class="crystal-content">
+        <h1 style="background: linear-gradient(135deg, #ff6a00, #ee0979)">
+          Crystal Obtained: Syrus
+        </h1>
+        <p class="rarity"><strong>(1/99 chance)</strong></p>
+        <p class="description">A rare find, adding mystical powers!</p>
+        <p class="reward">+60 Dice Coins</p>
+        <img
+          src="syrus-crystal.png"
+          alt="Syrus Crystal"
+          class="crystal-image"
+        />
+      </div>
+    </div>
 
+    <div id="apicaOverlay" class="overlay">
+      <div class="crystal-content">
+        <h1 style="background: linear-gradient(135deg, #7b4397, #dc2430)">
+          Crystal Obtained: Apica
+        </h1>
+        <p class="rarity"><strong>(1/222 chance)</strong></p>
+        <p class="description">Unleash the power of the Apica crystal!</p>
+        <p class="reward">+100 Dice Coins</p>
+        <img
+          src="apica-crystal.png"
+          alt="Apica Crystal"
+          class="crystal-image"
+        />
+      </div>
+    </div>
 
-   <script src="script.js"></script>
- </body>
+    <div id="lecaOverlay" class="overlay">
+      <div class="crystal-content">
+        <h1 style="background: linear-gradient(135deg, #43cea2, #185a9d)">
+          Crystal Obtained: Leca
+        </h1>
+        <p class="rarity"><strong>(1/153 chance)</strong></p>
+        <p class="description">Tap into Leca’s hidden strength!</p>
+        <p class="reward">+80 Dice Coins</p>
+        <img src="leca-crystal.png" alt="Leca Crystal" class="crystal-image" />
+      </div>
+    </div>
+
+    <div id="pupiusOverlay" class="overlay">
+      <div class="crystal-content">
+        <h1 style="background: linear-gradient(135deg, #ff5f6d, #ffc371)">
+          Crystal Obtained: Pupius
+        </h1>
+        <p class="rarity"><strong>(1/423 chance)</strong></p>
+        <p class="description">Pupius glows with untold energy.</p>
+        <p class="reward">+150 Dice Coins</p>
+        <img
+          src="pupius-crystal.png"
+          alt="Pupius Crystal"
+          class="crystal-image"
+        />
+      </div>
+    </div>
+
+    <div id="glockOverlay" class="overlay">
+      <div class="crystal-content">
+        <h1 style="background: linear-gradient(135deg, #00c9ff, #92fe9d)">
+          Crystal Obtained: Glock
+        </h1>
+        <p class="rarity"><strong>(1/742 chance)</strong></p>
+        <p class="description">Glock is a symbol of ultimate luck!</p>
+        <p class="reward">+250 Dice Coins</p>
+        <img
+          src="glock-crystal.png"
+          alt="Glock Crystal"
+          class="crystal-image"
+        />
+      </div>
+    </div>
+
+    <div id="shopModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Upgrade Shop</h2>
+        <p id="liveRollCount">Buy Upgrades</p>
+        <div class="upgrade">
+          <img src="2x-rolls.png" alt="2x Rolls Upgrade" />
+          <p>2x Rolls (Cost: <strong>1000 Rolls</strong>)</p>
+          <button id="buy2xBtn">Buy</button>
+          <br />
+          <br />
+          <p id="purchaseMessage" style="display: none"></p>
+        </div>
+        <div class="upgrade">
+          <img src="2x-luck.png" alt="2x Luck Upgrade" />
+          <p>2x Luck (Cost: <strong>3000 Rolls</strong>)</p>
+          <button id="buy2xLuckBtn">Buy</button>
+          <p id="luckPurchaseMessage" style="display: none"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
