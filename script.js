@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const rollProbability = Math.random();
       let crystalRolled = false;
   
-      if (rollProbability < 1 / 10) {
+      if (rollProbability < 1 / 100000) {
         showCrystalOverlay(
           "uLight",
           50,
