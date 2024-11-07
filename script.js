@@ -232,8 +232,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function buy2xLuckUpgrade() {
     const message = document.getElementById("luckPurchaseMessage");
-    if (rollCount >= 50 && !is2xLuckEnabled) {
-      rollCount -= 50;
+    if (rollCount >= 3000 && !is2xLuckEnabled) {
+      rollCount -= 3000;
       localStorage.setItem("rollCount", rollCount);
       is2xLuckEnabled = true;
       localStorage.setItem("is2xLuckEnabled", true);
