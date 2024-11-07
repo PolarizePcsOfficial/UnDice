@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result").textContent =
           `You rolled a Syrus crystal!`;
         crystalRolled = true;
-      } else if (rollProbability < 1 / 10) {
+      } else if (rollProbability < 1 / 3) {
         showCrystalOverlay(
           "Apica",
           100,
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result").textContent =
           `You rolled an Apica crystal!`;
         crystalRolled = true;
-      } else if (rollProbability < 1 / 10) {
+      } else if (rollProbability < 1 / 3) {
         showCrystalOverlay(
           "Leca",
           125,
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result").textContent =
           `You rolled a Leca crystal!`;
         crystalRolled = true;
-      } else if (rollProbability < 1 / 10) {
+      } else if (rollProbability < 1 / 3) {
         showCrystalOverlay(
           "Pupius",
           150,
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result").textContent =
           `You rolled a Pupius crystal!`;
         crystalRolled = true;
-      } else if (rollProbability < 1 / 10) {
+      } else if (rollProbability < 1 / 3) {
         showCrystalOverlay(
           "Glock",
           200,
