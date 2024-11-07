@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const rollProbability = Math.random();
       let crystalRolled = false;
   
-      if (rollProbability < 1 / 75) {
+      if (rollProbability < 1 / 10) {
         showCrystalOverlay(
           "uLight",
           50,
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result").textContent =
           `You rolled a uLight crystal!`;
         crystalRolled = true;
-      } else if (rollProbability < 1 / 99) {
+      } else if (rollProbability < 1 / 10) {
         showCrystalOverlay(
           "Syrus",
           75,
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result").textContent =
           `You rolled a Syrus crystal!`;
         crystalRolled = true;
-      } else if (rollProbability < 1 / 222) {
+      } else if (rollProbability < 1 / 10) {
         showCrystalOverlay(
           "Apica",
           100,
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result").textContent =
           `You rolled an Apica crystal!`;
         crystalRolled = true;
-      } else if (rollProbability < 1 / 153) {
+      } else if (rollProbability < 1 / 10) {
         showCrystalOverlay(
           "Leca",
           125,
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result").textContent =
           `You rolled a Leca crystal!`;
         crystalRolled = true;
-      } else if (rollProbability < 1 / 423) {
+      } else if (rollProbability < 1 / 10) {
         showCrystalOverlay(
           "Pupius",
           150,
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("result").textContent =
           `You rolled a Pupius crystal!`;
         crystalRolled = true;
-      } else if (rollProbability < 1 / 742) {
+      } else if (rollProbability < 1 / 10) {
         showCrystalOverlay(
           "Glock",
           200,
